@@ -1,27 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-// Create a node
 struct Node {
   int data;
   struct Node* next;
 };
 
-// Insert at the beginning
 void insertAtBeginning(struct Node** head_ref, int new_data) {
-  // Allocate memory to a node
+ 
   struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
 
-  // insert the data
   new_node->data = new_data;
 
   new_node->next = (*head_ref);
 
-  // Move head to new node
   (*head_ref) = new_node;
 }
 
-// Insert a node after a node
+
 void insertAfter(struct Node* prev_node, int new_data) {
   if (prev_node == NULL) {
   printf("the given previous node cannot be NULL");
@@ -33,8 +28,6 @@ void insertAfter(struct Node* prev_node, int new_data) {
   new_node->next = prev_node->next;
   prev_node->next = new_node;
 }
-
-// Insert the the end
 void insertAtEnd(struct Node** head_ref, int new_data) {
   struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
   struct Node* last = *head_ref; /* used in step 5*/
@@ -53,7 +46,7 @@ void insertAtEnd(struct Node** head_ref, int new_data) {
   return;
 }
 
-// Delete a node
+
 void deleteNode(struct Node** head_ref, int key) {
   struct Node *temp = *head_ref, *prev;
 
@@ -62,22 +55,22 @@ void deleteNode(struct Node** head_ref, int key) {
   free(temp);
   return;
   }
-  // Find the key to be deleted
+
   while (temp != NULL && temp->data != key) {
   prev = temp;
   temp = temp->next;
   }
 
-  // If the key is not present
+ 
   if (temp == NULL) return;
 
-  // Remove the node
+ 
   prev->next = temp->next;
 
   free(temp);
 }
 
-// Search a node
+
 int searchNode(struct Node** head_ref, int key) {
   struct Node* current = *head_ref;
 
@@ -88,7 +81,7 @@ int searchNode(struct Node** head_ref, int key) {
   return 0;
 }
 
-// Sort the linked list
+
 void sortLinkedList(struct Node** head_ref) {
   struct Node *current = *head_ref, *index = NULL;
   int temp;
@@ -97,7 +90,7 @@ void sortLinkedList(struct Node** head_ref) {
   return;
   } else {
   while (current != NULL) {
-    // index points to the node next to current
+    
     index = current->next;
 
     while (index != NULL) {
@@ -113,7 +106,7 @@ void sortLinkedList(struct Node** head_ref) {
   }
 }
 
-// Print the linked list
+
 void printList(struct Node* node) {
   while (node != NULL) {
   printf(" %d ", node->data);
@@ -121,7 +114,7 @@ void printList(struct Node* node) {
   }
 }
 
-// Driver program
+
 int main() {
   struct Node* head = NULL;
 
