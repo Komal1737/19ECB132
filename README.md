@@ -10,7 +10,7 @@
 
 [double linked list](doublelinkedlist.c)
 
-https://github.com/Komal1737/19ECB132/blob/main/array.c
+[array](array.c)
 
 https://github.com/Komal1737/19ECB132/blob/main/Datastructures.c
 
