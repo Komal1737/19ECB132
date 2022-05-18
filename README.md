@@ -2,7 +2,7 @@
 
 [tree traversal](treetraversal.c)
 
-[insertion bst](https://github.com/Komal1737/19ECB132/blob/main/insertionbst.c)
+[insertion bst](insertionbst.c)
 
 [single linked list](https://github.com/Komal1737/19ECB132/blob/main/singlelinkedlist.c)
 
