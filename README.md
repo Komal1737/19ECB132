@@ -12,5 +12,5 @@
 
 [array](array.c)
 
-https://github.com/Komal1737/19ECB132/blob/main/Datastructures.c
+[Data Structures](Datastructures.c)
 
