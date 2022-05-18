@@ -4,7 +4,7 @@
 
 [insertion bst](insertionbst.c)
 
-[single linked list](https://github.com/Komal1737/19ECB132/blob/main/singlelinkedlist.c)
+[single linked list](singlelinkedlist.c)
 
 [number of characters](number_of_characters.c)
 
