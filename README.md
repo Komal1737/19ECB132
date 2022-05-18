@@ -1,6 +1,6 @@
 [binary search tree](binarysearchtree.c)
 
-[tree traversal](https://github.com/Komal1737/19ECB132/blob/main/treetraversal.c)
+[tree traversal](treetraversal.c)
 
 [insertion bst](https://github.com/Komal1737/19ECB132/blob/main/insertionbst.c)
 
