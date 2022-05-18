@@ -8,7 +8,7 @@
 
 [number of characters](number_of_characters.c)
 
-https://github.com/Komal1737/19ECB132/blob/main/doublelinkedlist.c
+[double linked list](doublelinkedlist.c)
 
 https://github.com/Komal1737/19ECB132/blob/main/array.c
 
