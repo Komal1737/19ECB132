@@ -1,4 +1,4 @@
-[binary search tree](https://github.com/Komal1737/19ECB132/blob/main/binarysearchtree.c)
+[binary search tree](binarysearchtree.c)
 [tree traversal](https://github.com/Komal1737/19ECB132/blob/main/treetraversal.c)
 [insertion bst](https://github.com/Komal1737/19ECB132/blob/main/insertionbst.c)
 [single linked list](https://github.com/Komal1737/19ECB132/blob/main/singlelinkedlist.c)
