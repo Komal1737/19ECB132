@@ -1,5 +1,6 @@
 #include <stdio.h>
 int insertSorted(int arr[], int n, int key, int capacity)
+int main()
 {
     if (n >= capacity)
         return n;
