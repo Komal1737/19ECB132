@@ -1,16 +1,19 @@
-#include<stdio.h>
-#include<string.h>
-main()
-{
-	char str[100];
-	int n,c=0;
-	printf("Enter the Sentence:");gets(str);
-	for(n=0;str[n]!='\0';n++)
-	{
-		if(str[n]!=' ')
-		{
-			c++
-		}
-		printf("The number of characters in the given sentence is %d",c);
-		getch();
-	}
+# include <stdio.h>
+# include <string.h>
+int main(void) {
+  char sentence[20];
+  int number_of_letters = 0;
+  printf("Enter a sentence: ");
+  scanf("%s", sentence);
+  for (int i=0; i<strlen(sentence); i++)
+    if (sentence[i] !=  ' ')
+      number_of_letters++;
+  printf("\nThe number of letters in the given sentence are : %d\n", number_of_letters);
+  return 0;
+}
+/*
+output:
+Enter a sentence: komal
+
+The number of letters in the given sentence are : 5
+*/
