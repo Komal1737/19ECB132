@@ -1,40 +1,101 @@
 #include <stdio.h>
-int insertSorted(int arr[], int n, int key, int capacity)
+#include <stdlib.h>
 int main()
 {
-    if (n >= capacity)
-        return n;
-  
-    int i;
-    for (i = n - 1; (i >= 0 && arr[i] > key); i--)
-        arr[i + 1] = arr[i];
-  
-    arr[i + 1] = key;
-  
-    return (n + 1);
-}
-  
-int main()
-{
-    int arr[20] = { 12, 16, 20, 40, 50, 70 };
-    int capacity = sizeof(arr) / sizeof(arr[0]);
-    int n = 6;
-    int i, key = 26;
-  
-    printf("\nBefore Insertion: ");
-    for (i = 0; i < n; i++)
-        printf("%d  ", arr[i]);
-  
-    // Inserting key
-    n = insertSorted(arr, n, key, capacity);
-  
-    printf("\nAfter Insertion: ");
-    for (i = 0; i < n; i++)
-        printf("%d  ", arr[i]);
-  
+    int a[100];
+    int element,i,loc,size,n,j,choice;
+    printf("C Program to Insert and Delete an Element in an Array using switch case\n");
+    printf("1. Inserting an Element in an Array\n");
+    printf("2. Deleting an Element in an Array\n");
+    printf("Select your choice : ");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+    case 1:
+        printf("Enter the size of an array\n");
+        scanf("%d",&size);
+        printf("Enter %d array elements\n",size);
+        for(i=0;i<size;i++)
+        {
+            scanf("%d",&a[i]);
+        }
+        printf("List before Insertion: ");
+        for(i=0;i<size;i++)
+        {
+            printf("%d ",a[i]);
+        }
+        printf("\nEnter an element to insert\n");
+        scanf("%d",&element);
+        printf("Enter a position to insert an element %d\n",element);
+        scanf("%d",&loc);
+        loc--;
+        for(i=size-1;i>=loc;i--)
+        {
+            a[i+1]=a[i];
+        }
+        a[loc]=element;
+        printf("List after Insertion: ");
+        for(i=0;i<size+1;i++)
+        {
+            printf("%d ",a[i]);
+        }
+         break;
+    case 2:
+        printf("Enter the size of an array\n");
+        scanf("%d",&size);
+        printf("Enter elements\n");
+        for(i=0;i<size;i++)
+        {
+            scanf("%d",&a[i]);
+        }
+        printf("List before deletion\n");
+        for(i=0;i<size;i++)
+        {
+            printf("%d ",a[i]);
+        }
+        printf("\nEnter an element to delete\n");
+        scanf("%d",&n);
+        for(i=0;i<size;i++)
+        {
+            if(a[i]==n)
+            {
+                for(j=i;j<(size-1);j++)
+                {
+                    a[j]=a[j+1];
+                }
+                break;
+            }
+        }
+        printf("List after deletion\n");
+        for(i=0;i<(size-1);i++)
+        {
+            printf("%d ",a[i]);
+        }
+        break;
+    default:
+        printf("Wrong choice, Please try again later");
+    }
     return 0;
 }
-#include <stdio.h>
+/* output
+C Program to Insert and Delete an Element in an Array using switch case
+1. Inserting an Element in an Array
+2. Deleting an Element in an Array
+Select your choice : 1
+Enter the size of an array
+4
+Enter 4 array elements
+1
+2
+3
+4
+List before Insertion: 1 2 3 4 
+Enter an element to insert
+5
+Enter a position to insert an element 5
+3
+List after Insertion: 1 2 5 3 4
+*/
   
 // To search a key to be deleted
 int binarySearch(int arr[], int low, int high, int key);
